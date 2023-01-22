@@ -1,0 +1,18 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+.heroBanner__blog {
+    @include heroBanners;
+    background-image: $grey-filter-gradient, url(../assets/images/pexels-tara-winstead-7123050.jpg);
+    .bannerText {
+        padding: 40px;
+        text-align: left;
+    }
+}
+
+.singleSection__blog {
+    @include singlegrid;
+    text-align: center;
+    background-color: $light-color;
+}

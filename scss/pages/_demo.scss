@@ -1,0 +1,12 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+.heroBanner__demo {
+    @include heroBanners;
+    background-image: $grey-filter-gradient, url(../assets/images/pexels-pixabay-159108.jpg);
+    .bannerText {
+        padding: 40px;
+        text-align: left;
+    }
+}

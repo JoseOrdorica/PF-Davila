@@ -1,0 +1,62 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    .navLogo {
+        display: flex;
+        justify-content: left;
+        flex: 1 0 auto;
+    }
+    .navContainer {
+        flex: 1 1 auto;
+        height: 100%;
+        align-items: center;
+        .navInput, .navLabel {
+            display: none;
+        }
+        .navMenu {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 1em;
+            align-items: center;
+            .navItem {
+                display: block;
+                color: $light-color;
+                text-decoration: none;
+                padding: 10px 0 10px 0;
+                &:hover {
+                    background-color: $nav-background-hover;
+                }
+            }
+        }
+        @media screen and (max-width:480px) {
+            .navItem {
+                width: 100%;
+            }
+            .navLabel {
+                display:block;
+            }
+            .navMenu {
+                position: fixed;
+                top: 100px;
+                bottom: 0;
+                background-color: $dark-color;
+                width: 100%;
+                left: 0;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                clip-path: circle(0 at bottom);
+                transition: clip-path 1s ease-in-out;
+            }
+            .navInput:checked + .navMenu{
+                clip-path: circle(100% at center);
+            }
+        }
+    }
+}

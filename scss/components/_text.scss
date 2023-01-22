@@ -1,0 +1,69 @@
+h1 {
+    font-family: $main-fonts;
+    font-size:xx-large;
+    font-weight: lighter;
+    text-align: left;
+}
+
+h2 {
+    font-family:$main-fonts;
+    font-size: x-large;
+    font-weight: lighter;
+    text-align: left;
+}
+
+h3 {
+    font-family: $main-fonts;
+    font-size:xx-large;
+    font-weight: 400;
+    color: $primary-color;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-family: $main-fonts;
+    font-size:xx-large;
+    font-weight: lighter;
+    color: $light-color;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h5 {
+    font-family:$main-fonts;
+    font-size: large;
+    color: $primary-color;
+}
+
+h6 {
+    font-family:$main-fonts;
+    font-size: medium;
+}
+
+.darkp {
+    font-family: $main-fonts;
+    color: $dark-color;
+}
+
+.lightp {
+    font-family: $main-fonts;
+    color: $light-color;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    list-style-type: none;
+    a:link,:visited {
+        text-decoration: none;
+        color: $dark-color;
+    }
+}
+
+i {
+    color: $primary-color;
+}
+
+.inputClear {
+    border: none;
+}

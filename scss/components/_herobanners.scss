@@ -1,0 +1,14 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+.heroBanners {
+    width: 100vw;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: $light-color;
+    }
+

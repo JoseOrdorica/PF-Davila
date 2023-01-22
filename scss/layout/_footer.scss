@@ -1,0 +1,30 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+// Components
+@import './components/buttons';
+@import './components/herobanners';
+@import './components/nav';
+@import './components/sections';
+@import './components/images';
+@import './components/text';
+
+footer {
+    .footerHeader {
+        background-color: $primary-color;
+        color: $light-color;
+        text-align: center;
+        padding: 15px;
+    }
+    .tripleSection {
+        justify-content: center;
+        margin: 20px;
+    }        
+    .rights {
+        background-color: $dark-color;
+        color: $light-color;
+        text-align: center;
+        padding: 5px;
+        }
+}

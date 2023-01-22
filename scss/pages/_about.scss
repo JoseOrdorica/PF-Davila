@@ -1,0 +1,14 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+.heroBanner__aboutMe {
+    @include heroBanners;
+    background-image: $grey-filter-gradient, url(../assets/images/pexels-mike-murray-5701951.jpg);
+    .bannerText {
+        padding: 40px;
+        text-align: left;
+    }
+}
+
+

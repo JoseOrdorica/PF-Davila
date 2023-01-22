@@ -1,0 +1,18 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+.heroBanner__index {
+    @include heroBanners;
+    background-image: $grey-filter-gradient, url(../assets/images/pexels-sofía-morales-14567680.jpg);
+    .bannerText {
+        padding: 40px;
+        text-align: left;
+    }
+}
+
+.doubleSection__index {
+    @include doublegrid;
+    background-image: url(../assets/images/paper-style-white-monochrome-background_52683-66443.jpg);
+    padding: 0 50px;
+}

@@ -1,0 +1,11 @@
+@import './utilities/variables';
+@import './utilities/mixins';
+
+.button {
+    @include mainTheme;
+    text-decoration: none;
+    border-radius: 3px;
+    &:hover {
+        background-color: $button-background-hover;
+    }
+}

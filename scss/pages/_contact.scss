@@ -1,0 +1,14 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+.heroBanner__contact {
+    @include heroBanners;
+    background-image: $grey-filter-gradient, url(../assets./images/pexels-yura-forrat-12158398.jpg);
+    .bannerText {
+        padding: 40px;
+        text-align: left;
+    }
+}
+
+

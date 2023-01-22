@@ -1,0 +1,90 @@
+@import './variables';
+
+@mixin mainTheme {
+    background-color: $primary-color;
+    color: $light-color;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+@mixin heroBanners {
+    width: 100vw;
+    height: 450px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: $light-color;
+    }
+
+@mixin grid($columns, $space) {
+    display: grid;
+    grid-template-columns: repeat($columns , 1fr);
+    gap: $space;
+    @media screen and (max-width:480px) {
+        grid-template-columns: 1fr;
+        gap: 0em;
+    }
+} 
+
+@mixin midGrid($columns, $space) {
+    display: grid;
+    grid-template-columns: repeat($columns , 1fr);
+    gap: $space;
+    @media screen and (max-width:767px) {
+        grid-template-columns: 1fr;
+        gap: 0em;
+    }
+} 
+
+@mixin responsiveImage {
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin listImage {
+    min-width: 150px;
+    max-width: 200px;
+    padding: 20px 0;
+}
+
+@mixin singlegrid {
+    @include grid(1, 1em);
+    background-color: $primary-color;
+    padding: 35px 5%;
+    div {
+        text-align: center;
+    }
+}
+
+@mixin doublegrid {
+    @include midGrid(2, 1em);
+    div {
+        padding: 20px 0;
+        img {
+            display: block;
+        }
+    }
+}
+
+@mixin articledoublegrid {
+    @include midGrid(2, 1em);
+}
+
+@mixin triplegrid {
+    @include grid(3, 1em);
+    div {
+        text-align: center;
+        padding: 10px;
+        ul {
+            padding: 0;
+            list-style-type: none;        
+        }
+    }
+}
+
+@mixin imageContainer {
+    display: flex;
+    justify-content: center;
+}
