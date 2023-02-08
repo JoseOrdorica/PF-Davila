@@ -4,11 +4,15 @@
 
 .heroBanner__aboutMe {
     @include heroBanners;
-    background-image: $grey-filter-gradient, url(../assets/images/pexels-mike-murray-5701951.jpg);
+    background-image: $grey-filter-gradient, url(../assets/images/hero2.webp);
+    padding: 0 50px;
     .bannerText {
-        padding: 40px;
-        text-align: left;
+        padding: 40px 0;
     }
 }
 
-
+.doubleSection__about {
+    @include doublegrid;
+    background-image: url(../assets/images/background1.webp);
+    padding: 50px;
+}

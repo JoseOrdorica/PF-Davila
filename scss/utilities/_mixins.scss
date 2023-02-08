@@ -36,6 +36,16 @@
         grid-template-columns: 1fr;
         gap: 0em;
     }
+}
+
+@mixin triGrid($columns, $space) {
+    display: grid;
+    grid-template-columns: repeat($columns , 1fr);
+    gap: $space;
+    @media screen and (max-width:680px) {
+        grid-template-columns: 1fr;
+        gap: 0em;
+    }
 } 
 
 @mixin responsiveImage {
@@ -68,15 +78,22 @@
     }
 }
 
-@mixin articledoublegrid {
-    @include midGrid(2, 1em);
-}
-
 @mixin triplegrid {
     @include grid(3, 1em);
     div {
         text-align: center;
         padding: 10px;
+        ul {
+            padding: 0;
+            list-style-type: none;        
+        }
+    }
+}
+
+@mixin demoTripleGrid {
+    @include triGrid(3, 1em);
+    div {
+        text-align: center;
         ul {
             padding: 0;
             list-style-type: none;        

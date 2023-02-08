@@ -4,9 +4,10 @@
 
 .heroBanner__demo {
     @include heroBanners;
-    background-image: $grey-filter-gradient, url(../assets/images/pexels-pixabay-159108.jpg);
+    background-image: $grey-filter-gradient, url(../assets/images/hero3.webp);
+    padding: 0 50px;
     .bannerText {
-        padding: 40px;
-        text-align: left;
+        padding: 40px 0;
     }
 }
+

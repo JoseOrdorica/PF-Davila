@@ -4,10 +4,10 @@
 
 .heroBanner__blog {
     @include heroBanners;
-    background-image: $grey-filter-gradient, url(../assets/images/pexels-tara-winstead-7123050.jpg);
+    background-image: $grey-filter-gradient, url(../assets/images/hero4.webp);
+    padding: 0 50px;
     .bannerText {
-        padding: 40px;
-        text-align: left;
+        padding: 40px 0;
     }
 }
 
@@ -15,4 +15,5 @@
     @include singlegrid;
     text-align: center;
     background-color: $light-color;
+    padding: 50px;
 }

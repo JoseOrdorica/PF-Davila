@@ -33,6 +33,7 @@ h5 {
     font-family:$main-fonts;
     font-size: large;
     color: $primary-color;
+    margin: 10px 0;
 }
 
 h6 {
@@ -64,6 +65,30 @@ i {
     color: $primary-color;
 }
 
-.inputClear {
-    border: none;
+input {
+    border-color: $section-background-hover;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 10px 0;
+    font-size: 1.4em;
+}
+
+label {
+    font-size: 1rem;
+    color: $dark-color;
+    font-weight: 500;
+    font-family:$main-fonts;
+}
+
+textarea {
+    border-color: $section-background-hover;
+    border-radius: 5px;
+    border-width: 1px;
+    font-size: .9em;
+}
+
+form {
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }

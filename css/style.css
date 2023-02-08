@@ -1,7 +1,8 @@
-@charset "UTF-8";
 * {
   margin: 0;
-  box-sizing: border-box; }
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
 
 body {
   margin: 0;
@@ -10,7 +11,7 @@ body {
   overflow-x: hidden;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 100vw;
-  height: fit-content;
+  min-height: 100vh;
   background-color: #f8f8f8;
   overflow-x: hidden; }
 
@@ -26,12 +27,11 @@ body {
 
 .heroBanners {
   width: 100vw;
-  text-align: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  color: #f8f8f8; }
+  color: #f8f8f8;
+  padding: 0 50px; }
 
 nav {
   display: flex;
@@ -87,7 +87,8 @@ nav {
   background-color: darkslateblue;
   padding: 35px 5%;
   color: #f8f8f8;
-  background-color: darkslateblue; }
+  background-color: darkslateblue;
+  padding: 50px; }
   @media screen and (max-width: 480px) {
     .singleSection {
       grid-template-columns: 1fr;
@@ -99,7 +100,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
-  padding: 0 30px; }
+  padding: 0 50px; }
   @media screen and (max-width: 767px) {
     .doubleSection {
       grid-template-columns: 1fr;
@@ -113,19 +114,19 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
-  padding: 50px 30px; }
-  @media screen and (max-width: 480px) {
+  padding: 20px 50px 50px; }
+  @media screen and (max-width: 680px) {
     .tripleSectionIcon {
       grid-template-columns: 1fr;
       gap: 0em; } }
   .tripleSectionIcon div {
-    text-align: center;
-    padding: 10px; }
+    text-align: center; }
     .tripleSectionIcon div ul {
       padding: 0;
       list-style-type: none; }
   .tripleSectionIcon i {
-    font-size: xx-large; }
+    font-size: xx-large;
+    margin-top: 30px; }
 
 .tripleSection {
   display: grid;
@@ -146,27 +147,57 @@ nav {
   display: flex;
   justify-content: center; }
 
-.articleList ul {
-  padding: 20px;
-  list-style-type: none; }
-  .articleList ul li {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    font-weight: lighter; }
-    .articleList ul li img {
-      padding-right: 10px; }
-    .articleList ul li:hover {
-      background-color: rgba(126, 114, 202, 0.226); }
+.demoCard {
+  border-radius: 5px;
+  box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
+  margin: 20px 0; }
+  .demoCard p {
+    padding: 0 20px 20px;
+    color: #1b1b1b; }
+  .demoCard img {
+    display: block;
+    width: 100%;
+    height: 18rem;
+    object-fit: cover; }
+  .demoCard:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+
+.articleList {
+  padding: 0 50px; }
+  .articleList ul {
+    padding: 20px;
+    list-style-type: none; }
+    .articleList ul li {
+      border-radius: 5px;
+      box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-weight: lighter; }
+      @media (min-width: 581px) {
+        .articleList ul li img {
+          margin-right: 10px;
+          min-width: 150px;
+          max-width: 200px;
+          padding: 20px 0; } }
+      @media (max-width: 580px) {
+        .articleList ul li {
+          flex-direction: column; }
+          .articleList ul li div h2, .articleList ul li div p {
+            text-align: center; }
+          .articleList ul li div img {
+            display: block;
+            width: 100vw;
+            object-fit: contain; } }
+      .articleList ul li:hover {
+        transform: translateY(-0.5%);
+        box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
 
 img {
   max-width: 100%;
   height: auto; }
-
-.articleImage {
-  min-width: 150px;
-  max-width: 200px;
-  padding: 20px 0; }
 
 h1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -198,7 +229,8 @@ h4 {
 h5 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: large;
-  color: darkslateblue; }
+  color: darkslateblue;
+  margin: 10px 0; }
 
 h6 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -223,18 +255,40 @@ ul {
 i {
   color: darkslateblue; }
 
-.inputClear {
-  border: none; }
+input {
+  border-color: rgba(126, 114, 202, 0.226);
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 10px 0;
+  font-size: 1.4em; }
+
+label {
+  font-size: 1rem;
+  color: #1b1b1b;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+textarea {
+  border-color: rgba(126, 114, 202, 0.226);
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: .9em; }
+
+form {
+  text-align: center;
+  margin: 0;
+  padding: 0; }
 
 footer .footerHeader {
   background-color: darkslateblue;
   color: #f8f8f8;
   text-align: center;
-  padding: 15px; }
+  padding: 15px 50px; }
 
 footer .tripleSection {
   justify-content: center;
-  margin: 20px; }
+  margin: 0 5px;
+  padding: 30px 50px; }
 
 footer .rights {
   background-color: #1b1b1b;
@@ -254,12 +308,11 @@ footer .rights {
 
 .heroBanners {
   width: 100vw;
-  text-align: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  color: #f8f8f8; }
+  color: #f8f8f8;
+  padding: 0 50px; }
 
 nav {
   display: flex;
@@ -315,7 +368,8 @@ nav {
   background-color: darkslateblue;
   padding: 35px 5%;
   color: #f8f8f8;
-  background-color: darkslateblue; }
+  background-color: darkslateblue;
+  padding: 50px; }
   @media screen and (max-width: 480px) {
     .singleSection {
       grid-template-columns: 1fr;
@@ -327,7 +381,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
-  padding: 0 30px; }
+  padding: 0 50px; }
   @media screen and (max-width: 767px) {
     .doubleSection {
       grid-template-columns: 1fr;
@@ -341,19 +395,19 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
-  padding: 50px 30px; }
-  @media screen and (max-width: 480px) {
+  padding: 20px 50px 50px; }
+  @media screen and (max-width: 680px) {
     .tripleSectionIcon {
       grid-template-columns: 1fr;
       gap: 0em; } }
   .tripleSectionIcon div {
-    text-align: center;
-    padding: 10px; }
+    text-align: center; }
     .tripleSectionIcon div ul {
       padding: 0;
       list-style-type: none; }
   .tripleSectionIcon i {
-    font-size: xx-large; }
+    font-size: xx-large;
+    margin-top: 30px; }
 
 .tripleSection {
   display: grid;
@@ -374,27 +428,57 @@ nav {
   display: flex;
   justify-content: center; }
 
-.articleList ul {
-  padding: 20px;
-  list-style-type: none; }
-  .articleList ul li {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    font-weight: lighter; }
-    .articleList ul li img {
-      padding-right: 10px; }
-    .articleList ul li:hover {
-      background-color: rgba(126, 114, 202, 0.226); }
+.demoCard {
+  border-radius: 5px;
+  box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
+  margin: 20px 0; }
+  .demoCard p {
+    padding: 0 20px 20px;
+    color: #1b1b1b; }
+  .demoCard img {
+    display: block;
+    width: 100%;
+    height: 18rem;
+    object-fit: cover; }
+  .demoCard:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+
+.articleList {
+  padding: 0 50px; }
+  .articleList ul {
+    padding: 20px;
+    list-style-type: none; }
+    .articleList ul li {
+      border-radius: 5px;
+      box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-weight: lighter; }
+      @media (min-width: 581px) {
+        .articleList ul li img {
+          margin-right: 10px;
+          min-width: 150px;
+          max-width: 200px;
+          padding: 20px 0; } }
+      @media (max-width: 580px) {
+        .articleList ul li {
+          flex-direction: column; }
+          .articleList ul li div h2, .articleList ul li div p {
+            text-align: center; }
+          .articleList ul li div img {
+            display: block;
+            width: 100vw;
+            object-fit: contain; } }
+      .articleList ul li:hover {
+        transform: translateY(-0.5%);
+        box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
 
 img {
   max-width: 100%;
   height: auto; }
-
-.articleImage {
-  min-width: 150px;
-  max-width: 200px;
-  padding: 20px 0; }
 
 h1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -426,7 +510,8 @@ h4 {
 h5 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: large;
-  color: darkslateblue; }
+  color: darkslateblue;
+  margin: 10px 0; }
 
 h6 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -451,8 +536,29 @@ ul {
 i {
   color: darkslateblue; }
 
-.inputClear {
-  border: none; }
+input {
+  border-color: rgba(126, 114, 202, 0.226);
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 10px 0;
+  font-size: 1.4em; }
+
+label {
+  font-size: 1rem;
+  color: #1b1b1b;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+textarea {
+  border-color: rgba(126, 114, 202, 0.226);
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: .9em; }
+
+form {
+  text-align: center;
+  margin: 0;
+  padding: 0; }
 
 .heroBanner__index {
   width: 100vw;
@@ -463,17 +569,17 @@ i {
   background-size: cover;
   position: relative;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/pexels-sofía-morales-14567680.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero1.webp);
+  padding: 0 50px; }
   .heroBanner__index .bannerText {
-    padding: 40px;
-    text-align: left; }
+    padding: 40px 0; }
 
 .doubleSection__index {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
-  background-image: url(../assets/images/paper-style-white-monochrome-background_52683-66443.jpg);
-  padding: 0 50px; }
+  background-image: url(../assets/images/background1.webp);
+  padding: 50px; }
   @media screen and (max-width: 767px) {
     .doubleSection__index {
       grid-template-columns: 1fr;
@@ -492,10 +598,25 @@ i {
   background-size: cover;
   position: relative;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/pexels-mike-murray-5701951.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero2.webp);
+  padding: 0 50px; }
   .heroBanner__aboutMe .bannerText {
-    padding: 40px;
-    text-align: left; }
+    padding: 40px 0; }
+
+.doubleSection__about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  background-image: url(../assets/images/background1.webp);
+  padding: 50px; }
+  @media screen and (max-width: 767px) {
+    .doubleSection__about {
+      grid-template-columns: 1fr;
+      gap: 0em; } }
+  .doubleSection__about div {
+    padding: 20px 0; }
+    .doubleSection__about div img {
+      display: block; }
 
 .heroBanner__contact {
   width: 100vw;
@@ -506,10 +627,25 @@ i {
   background-size: cover;
   position: relative;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets./images/pexels-yura-forrat-12158398.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets./images/hero5.webp);
+  padding: 0 50px; }
   .heroBanner__contact .bannerText {
-    padding: 40px;
-    text-align: left; }
+    padding: 40px 0; }
+
+.doubleSection__index {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  background-image: url(../assets/images/background1.webp);
+  padding: 50px; }
+  @media screen and (max-width: 767px) {
+    .doubleSection__index {
+      grid-template-columns: 1fr;
+      gap: 0em; } }
+  .doubleSection__index div {
+    padding: 20px 0; }
+    .doubleSection__index div img {
+      display: block; }
 
 .heroBanner__blog {
   width: 100vw;
@@ -520,10 +656,10 @@ i {
   background-size: cover;
   position: relative;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/pexels-tara-winstead-7123050.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero4.webp);
+  padding: 0 50px; }
   .heroBanner__blog .bannerText {
-    padding: 40px;
-    text-align: left; }
+    padding: 40px 0; }
 
 .singleSection__blog {
   display: grid;
@@ -532,13 +668,39 @@ i {
   background-color: darkslateblue;
   padding: 35px 5%;
   text-align: center;
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  padding: 50px; }
   @media screen and (max-width: 480px) {
     .singleSection__blog {
       grid-template-columns: 1fr;
       gap: 0em; } }
   .singleSection__blog div {
     text-align: center; }
+
+.heroBanner__article {
+  width: 100vw;
+  height: 450px;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #f8f8f8;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero6.webp);
+  padding: 0 50px;
+  margin-bottom: 30px; }
+  .heroBanner__article .bannerText {
+    padding: 40px 0; }
+
+.articleContent {
+  margin: auto;
+  width: 65%;
+  padding: 10px; }
+  .articleContent img {
+    margin: 10px 0 10px 0; }
+  @media screen and (max-width: 1024px) {
+    .articleContent {
+      width: 85%; } }
 
 .heroBanner__demo {
   width: 100vw;
@@ -549,7 +711,7 @@ i {
   background-size: cover;
   position: relative;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/pexels-pixabay-159108.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero3.webp);
+  padding: 0 50px; }
   .heroBanner__demo .bannerText {
-    padding: 40px;
-    text-align: left; }
+    padding: 40px 0; }
