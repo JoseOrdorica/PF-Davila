@@ -627,7 +627,7 @@ form {
   background-size: cover;
   position: relative;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets./images/hero5.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero5.webp);
   padding: 0 50px; }
   .heroBanner__contact .bannerText {
     padding: 40px 0; }

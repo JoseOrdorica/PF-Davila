@@ -4,7 +4,7 @@
 
 .heroBanner__contact {
     @include heroBanners;
-    background-image: $grey-filter-gradient, url(../assets./images/hero5.webp);
+    background-image: $grey-filter-gradient, url(../assets/images/hero5.webp);
     padding: 0 50px;
     .bannerText {
         padding: 40px 0;
